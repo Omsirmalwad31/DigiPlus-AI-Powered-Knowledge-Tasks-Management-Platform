@@ -1,0 +1,369 @@
+.assistant-upload,
+.assistant-review {
+  padding: 22px;
+  margin-bottom: 16px;
+}
+
+.assistant-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.assistant-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: #6959d8;
+  background: #f0edff;
+}
+
+.assistant-section-heading h2,
+.assistant-review-heading h2 {
+  margin: 0;
+  color: #292c38;
+  font-size: 15px;
+  letter-spacing: -.2px;
+}
+
+.assistant-section-heading p,
+.assistant-review-heading p {
+  margin: 5px 0 0;
+  color: #888e9c;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.assistant-form {
+  display: grid;
+  gap: 15px;
+}
+
+.assistant-file-picker {
+  position: relative;
+  min-height: 76px;
+  padding: 13px;
+  border: 1px dashed #d9d7e8;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  background: #fcfbff;
+}
+
+.assistant-file-picker:hover {
+  border-color: #9c91e8;
+  background: #faf9ff;
+}
+
+.assistant-file-picker input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.assistant-file-picker > span:nth-of-type(2) {
+  flex: 1;
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.assistant-file-picker strong {
+  overflow: hidden;
+  color: #454957;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.assistant-file-picker small {
+  color: #969aa6;
+  font-size: 9px;
+}
+
+.assistant-file-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 9px;
+  color: #6a5bd7;
+  background: #efedff;
+}
+
+.assistant-upload-footer,
+.assistant-review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.assistant-upload-footer p {
+  max-width: 500px;
+  margin: 0;
+  color: #9297a3;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.assistant-review-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.assistant-review-heading .eyebrow {
+  margin-bottom: 7px;
+}
+
+.review-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 6px 9px;
+  color: #715fd0;
+  background: #f3f0ff;
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.assistant-review > .field-label,
+.assistant-action-items {
+  margin-top: 15px;
+}
+
+.assistant-review .field-label textarea,
+.assistant-review .field-label input {
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid #e8eaf0;
+  border-radius: 7px;
+  padding: 9px 10px;
+  color: #454957;
+  background: #fff;
+  font-size: 10px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.assistant-review .field-label textarea {
+  min-height: 60px;
+}
+
+.assistant-review .field-label .transcript-editor {
+  min-height: 180px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 9px;
+}
+
+.assistant-editor-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.assistant-editor-heading strong {
+  color: #555a68;
+  font-size: 10px;
+}
+
+.assistant-editor-heading span {
+  color: #959aa6;
+  font-size: 9px;
+}
+
+.assistant-action-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 2fr) minmax(120px, 1fr) minmax(120px, 1fr) 30px;
+  align-items: end;
+  gap: 9px;
+  margin: 9px 0;
+}
+
+.assistant-action-row .field-label {
+  min-width: 0;
+}
+
+.assistant-action-row .icon-button {
+  margin-bottom: 5px;
+}
+
+.assistant-review-footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eff0f3;
+  color: #8b909d;
+  font-size: 9px;
+}
+
+.assistant-saved {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #319572;
+  font-weight: 600;
+}
+
+.assistant-processing {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 15px;
+  color: #7466ce;
+  font-size: 10px;
+}
+
+.ai-config-warning {
+  border-color: #efdfb9;
+  background: #fffaf0;
+  color: #80621f;
+}
+
+.ai-config-warning strong {
+  color: #755818;
+}
+
+.speech-player {
+  margin: 0 0 18px;
+  padding: 13px;
+  border: 1px solid #ebe9f5;
+  border-radius: 9px;
+  background: #fcfbff;
+}
+
+.speech-player-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #6b5bd3;
+}
+
+.speech-player-title > div {
+  display: grid;
+  gap: 3px;
+}
+
+.speech-player-title strong {
+  color: #444958;
+  font-size: 10px;
+}
+
+.speech-player-title span {
+  color: #9398a4;
+  font-size: 9px;
+}
+
+.speech-player-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.speech-player-controls .button {
+  height: 30px;
+  font-size: 9px;
+}
+
+.speech-provider-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.speech-provider-toggle .button {
+  height: 29px;
+  font-size: 9px;
+}
+
+.speech-audio {
+  display: grid;
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.speech-audio audio {
+  width: 100%;
+  min-height: 36px;
+}
+
+.speech-audio span,
+.speech-cost-note {
+  color: #9297a3;
+  font-size: 9px;
+}
+
+.speech-select {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #858a97;
+  font-size: 9px;
+}
+
+.speech-select select {
+  max-width: 170px;
+  height: 29px;
+  border: 1px solid #e8eaf0;
+  border-radius: 6px;
+  padding: 0 7px;
+  color: #555a68;
+  background: #fff;
+  font-size: 9px;
+}
+
+.speech-error {
+  margin: 9px 0 0;
+  color: #b3535c;
+  font-size: 9px;
+}
+
+@media (max-width: 680px) {
+  .assistant-upload,
+  .assistant-review {
+    padding: 15px;
+  }
+
+  .assistant-file-picker {
+    flex-wrap: wrap;
+  }
+
+  .assistant-file-picker > .button {
+    display: none;
+  }
+
+  .assistant-upload-footer,
+  .assistant-review-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .assistant-action-row {
+    grid-template-columns: 1fr 1fr 30px;
+  }
+
+  .assistant-action-row .field-label:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .assistant-review-heading {
+    flex-direction: column;
+  }
+}

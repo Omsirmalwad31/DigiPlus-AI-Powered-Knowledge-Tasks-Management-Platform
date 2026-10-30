@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+hs_err_pid*.log
+replay_pid*.log
+**/target/
+**/node_modules/
+**/dist/

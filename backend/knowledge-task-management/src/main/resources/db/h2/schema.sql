@@ -1,0 +1,50 @@
+CREATE TABLE IF NOT EXISTS meetings (
+  meeting_id VARCHAR(36) PRIMARY KEY,
+  title VARCHAR(200) NOT NULL,
+  meeting_notes CLOB,
+  ai_summary CLOB,
+  category VARCHAR(100),
+  attendees_json CLOB,
+  starts_at TIMESTAMP NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tasks (
+  task_id VARCHAR(36) PRIMARY KEY,
+  title VARCHAR(300) NOT NULL,
+  owner_name VARCHAR(160),
+  due_date DATE,
+  status VARCHAR(32) NOT NULL,
+  priority VARCHAR(16) NOT NULL,
+  project VARCHAR(200),
+  meeting_id VARCHAR(36),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS meeting_tasks (
+  meeting_id VARCHAR(36) NOT NULL,
+  task_id VARCHAR(36) NOT NULL,
+  carried_forward BOOLEAN DEFAULT FALSE NOT NULL,
+  linked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  PRIMARY KEY (meeting_id, task_id)
+);
+
+CREATE TABLE IF NOT EXISTS knowledge_documents (
+  document_id VARCHAR(36) PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description CLOB,
+  document_type VARCHAR(80) NOT NULL DEFAULT 'NOTE',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS task_history (
+  history_id VARCHAR(36) PRIMARY KEY,
+  task_id VARCHAR(36) NOT NULL,
+  change_type VARCHAR(40) NOT NULL,
+  previous_value CLOB,
+  new_value CLOB,
+  changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);

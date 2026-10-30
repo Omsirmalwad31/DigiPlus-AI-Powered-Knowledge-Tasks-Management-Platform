@@ -4,6 +4,7 @@ DigiPlus is a React and Spring Boot workspace for meeting minutes, task follow-u
 
 ## Run locally
 
+
 The backend defaults to an in-memory H2 database in MySQL compatibility mode. It initializes its SQL schema at startup, so MySQL credentials are not required for local development.
 
 In PowerShell, start the backend:

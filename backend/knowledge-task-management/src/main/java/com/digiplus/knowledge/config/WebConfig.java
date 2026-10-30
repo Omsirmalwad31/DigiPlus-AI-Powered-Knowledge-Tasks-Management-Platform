@@ -15,7 +15,7 @@ public class WebConfig {
 	}
 
 	@Bean
-	WebMvcConfigurer corsConfigurer(@Value("${digiplus.cors.allowed-origins:http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174}") String allowedOrigins) {
+	WebMvcConfigurer corsConfigurer(@Value("${digiplus.cors.allowed-origins:http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174,https://digi-plus-ai-powered-knowledge-task-seven.vercel.app}") String allowedOrigins) {
 		var origins = allowedOrigins.split(",");
 		return new WebMvcConfigurer() {
 			@Override
